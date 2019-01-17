@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d456c6a5bd381d750488612104a496f34d466d57f71803170c35599bc7ffeee7
+-- hash: bc5e59bc2bfe0d7b244fc086df81c92d5cb8997ad0d776aa296b433b5e9f2754
 
 name:           haskell-basics
 version:        0.1.0.0
@@ -14,7 +14,7 @@ bug-reports:    https://github.com/shepherdjerred/haskell-basics/issues
 author:         Jerred Shepherd
 maintainer:     shepherdjerred@gmail.com
 copyright:      Jerred Shepherd
-license:        BSD3
+license:        GPL
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:

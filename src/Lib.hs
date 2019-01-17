@@ -1,6 +1,6 @@
 module Lib
-    ( someFunc
+    (second
     ) where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+second :: [Int] -> Int
+second list = list !! 1
