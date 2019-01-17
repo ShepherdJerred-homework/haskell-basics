@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Comp 475 Homework</title>
+    <link rel="stylesheet" href="../standard.css" type="text/css"/>
+    <base target="_top"/>
+    <style>
+      ol > li { margin-bottom: 4em; }
+    </style>
+  </head>
+  <body>
+    Write the following Haskell functions.  You must declare the types for all
+    functions.  When writing types, you should assume all values
+    are <code>Int</code> and all lists are <code>[Int]</code>.
+    Do <em>not</em> try to write generic functions yet (e.g., <code>T</code>
+    and <code>[T]</code>); we haven't fully discussed how those work.
+    <ol class="spaced">
+      <li>
+        A function named <code>second</code> which takes a list and returns
+        the second element in the list (you may assume the length of the list
+        is &gt;= 2).
+        <pre class="console">
+ghci&gt; <span class="input">second [3, 1, 4, 1, 5, 9]</span>
+1
+</pre>
+      </li>
+      <li>
+        A function named <code>firstN</code> that returns the first N integers
+        (starting with 1)
+        <pre class="console">
+ghci&gt; <span class="input">firstN</span> 7
+[1, 2, 3, 4, 5, 6, 7]
+</pre>
+      </li>
+      <li>
+        A function names <code>size</code> which takes a list and returns
+        <code>"small"</code> if the length of the list is less than
+        10, <code>"medium"</code> if the length of the list is between 10 and
+        20 (inclusive), and <code>"large"</code> if the length of the list is
+        greater than 20.
+        <pre class="console">
+ghci&gt; <span class="input">size [2, 6, 1, 5, 3, 5, 0]</span>
+"small"
+
+ghci&gt; <span class="input">size [1..100]</span>
+"large"
+</pre>
+      </li>
+      <li>
+        A function named <code>inRange</code> that takes (1) a minimum value,
+        (2) a maximum value, and (3) a test value.  Return <code>True</code>
+        if and only if the test value is between the minimum and maximum value
+        (inclusive).
+        <pre class="console">
+ghci&gt; <span class="input">inRange 3 7 5</span>
+True
+
+ghci&gt; <span class="input">inRange 3 7 15</span>
+False
+</pre>
+      </li>
+      <li>
+        A funciton named <code>validGrade</code> that takes a number and
+        decides if it is a valid grade; i.e., between 0 and 100 (inclusive).
+        Use your <code>inRange</code> function to do this.
+        <pre class="console">
+ghci&gt; <span class="input">validGrade 96</span>
+True
+
+ghci&gt; <span class="input">validGrade 196</span>
+False
+</pre>
+      </li>
+      <li>
+        A function named <code>startsWith</code> that takes a value and a list
+        of values and returns <code>True</code> if and only if the list begins with that
+        value.
+        <pre class="console">
+ghci&gt; <span class="input">startsWith 7 [7, 3, 1, 4]</span>
+True
+
+ghci&gt; <span class="input">startsWith 7 [9, 7, 7, 7]</span>
+False
+</pre>
+      </li>
+      <li>
+        A function named first10 which takes a value and a list and returns
+        <code>True</code> if and only if the value is one of the first 10
+        elements in the list
+        <pre class="console">
+ghci&gt; <span class="input">first10 8 [1..]</span>
+True
+
+ghci&gt; <span class="input">first10 27 [1..]</span>
+False
+</pre>
+      </li>
+      <li>
+        An operator named <code>&gt;&gt;</code> that takes two lists and
+        returns <code>True</code> if and only if the maximum value of the
+        first list is greater than the maximum value of the second list.
+        <pre class="console">
+ghci&gt; <span class="input">[3, 7, 2] &gt;&gt; [4, 3, 6]</span>
+True
+
+ghci&gt; <span class="input">[8, 8, 8] &gt;&gt; [2, 1, 9]</span>
+False
+</pre>
+      </li>
+      <li>
+        A function named <code>factorial</code> that takes a
+        number, <code>N</code> and calculates the product of the
+        first <code>N</code> integers.  (Note: you should only need the list
+        functions we covered and ranges to do this.)
+        <pre class="console">
+ghci&gt; <span class="input">factorial 5</span>
+120
+</pre>
+      </li>
+      <li>
+        A function named <code>range</code> which takes (1) a list, (2) a
+        starting index, and (3) an ending index.  Return the sublist which
+        begins at the starting index and goes up to but not including the
+        ending index.
+        <pre class="console">
+ghci&gt; <span class="input">range [1..100] 10 20</span>
+[11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+</pre>
+      </li>
+    </ol>
+  </body>
+</html>
