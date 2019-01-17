@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: bc5e59bc2bfe0d7b244fc086df81c92d5cb8997ad0d776aa296b433b5e9f2754
+-- hash: 149d55b9d2519adc11cd527ce1f02f7f3454eacdb9b0a99157e852a818d410f8
 
 name:           haskell-basics
 version:        0.1.0.0
@@ -36,18 +36,6 @@ library
       base >=4.7 && <5
   default-language: Haskell2010
 
-executable haskell-basics-exe
-  main-is: Main.hs
-  other-modules:
-      Paths_haskell_basics
-  hs-source-dirs:
-      app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , haskell-basics
-  default-language: Haskell2010
-
 test-suite haskell-basics-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
@@ -59,4 +47,5 @@ test-suite haskell-basics-test
   build-depends:
       base >=4.7 && <5
     , haskell-basics
+    , hspec
   default-language: Haskell2010

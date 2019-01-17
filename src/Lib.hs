@@ -4,3 +4,5 @@ module Lib
 
 second :: [Int] -> Int
 second list = list !! 1
+
+
